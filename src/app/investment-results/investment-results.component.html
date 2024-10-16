@@ -1,0 +1,24 @@
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Investment Value</th>
+      <th>Interest (Year)</th>
+      <th>Total Interest</th>
+      <th>Invested Capital</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    @for(result of resultData; track result.interest) {
+      <tr>
+        <td>{{ result.year }}</td>
+        <td>{{ result.annualInvestment.toFixed(2) + ' $' }}</td>
+        <td>{{ result.valueEndOfYear.toFixed(2)  + ' $'}}</td>
+        <td>{{ result.totalInterest.toFixed(2)  + ' $'}}</td>
+        <td>{{ result.totalAmountInvested.toFixed(2)  + ' $'}}</td>
+      </tr>
+    }
+
+  </tbody>
+</table>

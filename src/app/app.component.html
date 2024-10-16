@@ -1,1 +1,11 @@
-<h1 class="center">Practice Time!</h1>
+<app-header />
+
+<main>
+  <app-user-input (calculate)="onCalculate($event)" />
+</main>
+
+  <app-investment-results [resultData]="calculationResult" *ngIf="!isResultsEmpty; else noResults" />
+
+<ng-template #noResults>
+  <p>Please, enter some values and press "Calculate".</p>
+</ng-template>
