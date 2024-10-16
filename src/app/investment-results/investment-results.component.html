@@ -13,10 +13,10 @@
     @for(result of resultData; track result.interest) {
       <tr>
         <td>{{ result.year }}</td>
-        <td>{{ result.annualInvestment.toFixed(2) + ' $' }}</td>
-        <td>{{ result.valueEndOfYear.toFixed(2)  + ' $'}}</td>
-        <td>{{ result.totalInterest.toFixed(2)  + ' $'}}</td>
-        <td>{{ result.totalAmountInvested.toFixed(2)  + ' $'}}</td>
+        <td>{{ result.annualInvestment | currency:'USD':'symbol':'1.2-2' }}</td>
+        <td>{{ result.valueEndOfYear | currency:'USD':'symbol':'1.2-2'}}</td>
+        <td>{{ result.totalInterest | currency:'USD':'symbol':'1.2-2'}}</td>
+        <td>{{ result.totalAmountInvested | currency:'USD':'symbol':'1.2-2'}}</td>
       </tr>
     }
 
